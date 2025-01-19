@@ -1,0 +1,100 @@
+body, h1, ul, li, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4a90e2, #50c9c3);
+  color: #fff;
+}
+
+
+.stopwatch-container {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 300px;
+}
+
+
+.stopwatch-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#timer {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 10px 15px;
+  margin: 0 5px;
+  background: #50c9c3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #4a90e2;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+
+#laps {
+  list-style: none;
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+#laps li {
+  font-size: 1rem;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#laps li:last-child {
+  border-bottom: none;
+}
+
+
+#laps::-webkit-scrollbar {
+  width: 6px;
+}
+
+#laps::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
